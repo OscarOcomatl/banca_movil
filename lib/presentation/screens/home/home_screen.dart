@@ -13,16 +13,18 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: CustomAppbar.customAppBar(),
-      body: const Column(
-        // mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          TotalAmontInfo(),
-          CustomCard(),
-          LastTransactions(),
-          // Text('Hola'),
-          // Text('Hola'),
-        ],
+      body: SingleChildScrollView(
+        child: const Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            TotalAmontInfo(),
+            CustomCard(),
+            LastTransactions(),
+            // Text('Hola'),
+            // Text('Hola'),
+          ],
+        ),
       )
     );
   }

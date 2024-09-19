@@ -10,6 +10,20 @@ final appRouter = GoRouter(
       builder: ( context, state ){
         return const HomeScreen();
       }
+    ),
+    GoRoute(
+      path: '/transactions-history',
+      name: TransactionsHistoryScreen.name,
+      builder: (context, state) {
+        return const TransactionsHistoryScreen();
+      }
+    ),
+    GoRoute(
+      path: '/transaction-details',
+      name: TransactionDetailsScreen.name,
+      builder: (context, state){
+        return const TransactionDetailsScreen();
+      }
     )
   ]
 );

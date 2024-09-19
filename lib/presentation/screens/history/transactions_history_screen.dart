@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class TransactionDetailsScreen extends StatelessWidget {
+class TransactionsHistoryScreen extends StatelessWidget {
    
-  const TransactionDetailsScreen({super.key});
+  const TransactionsHistoryScreen({super.key}) ;
 
-  static const String name = 'transaction-details';
+  static const String name = 'transaction-history';
   
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-            appBar: AppBar(
-        title: const Text('Detalles del movimiento '),
+      appBar: AppBar(
+        title: const Text('Mis movimientos'),
         leading: IconButton(
           onPressed: (){
             context.push('/home');
@@ -20,7 +20,7 @@ class TransactionDetailsScreen extends StatelessWidget {
         )
       ),
       body: const Center(
-         child: Text('TransactionDetailsScreen'),
+         child: Text('TransactionsHistoryScreen'),
       ),
     );
   }
