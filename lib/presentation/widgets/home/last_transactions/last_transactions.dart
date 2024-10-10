@@ -1,3 +1,4 @@
+import 'package:banca_movil/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
@@ -111,46 +112,7 @@ class _TransactionItem extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.grey[350]
               ),
-              child: const Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20, ),
-                        child: Text('Cargo por SPEI', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600, )),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20),
-                        child: Row(
-                          children: [
-                            Text('+ 450000.00', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600)),
-                            SizedBox(width: 5),
-                            Text('MXN', style: TextStyle(fontSize: 14,))
-                          ],
-                        ),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20, ),
-                        child: Text('Hoy, 7:35 PM',style: TextStyle(fontSize: 14, fontWeight: FontWeight.w500)),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 20),
-                        child: Text('Ingreso',style: TextStyle(fontSize: 14, fontWeight: FontWeight.w600)),
-                      )
-                    ],
-                  )
-                ],
-              ),
+              child: const TransactionInfo(),
             ),
           ),
         ),
@@ -158,3 +120,4 @@ class _TransactionItem extends StatelessWidget {
     );
   }
 }
+
