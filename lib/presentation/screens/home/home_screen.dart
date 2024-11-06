@@ -1,5 +1,3 @@
-
-
 import 'package:banca_movil/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
@@ -11,10 +9,15 @@ class HomeScreen extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
+
+    final scaffoldKey = GlobalKey<ScaffoldState>();
+
     return Scaffold(
+      key: scaffoldKey,
       appBar: CustomAppbar.customAppBar(),
-      body: SingleChildScrollView(
-        child: const Column(
+      body: const SingleChildScrollView(
+        physics: NeverScrollableScrollPhysics(),
+        child: Column(
           // mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -25,7 +28,9 @@ class HomeScreen extends StatelessWidget {
             // Text('Hola'),
           ],
         ),
-      )
+      ),
+      // drawer: SideMenu(scaffoldKey: scaffoldKey),
+      endDrawer: SideMenu(scaffoldKey: scaffoldKey),
     );
   }
 }

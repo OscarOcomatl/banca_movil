@@ -24,6 +24,13 @@ final appRouter = GoRouter(
       builder: (context, state){
         return const TransactionDetailsScreen();
       }
-    )
+    ),
+    GoRoute(
+      path: '/add-new-card',
+      name: AddNewCard.name,
+      builder: (context, state){
+        return const AddNewCard();
+      }
+    ),
   ]
 );

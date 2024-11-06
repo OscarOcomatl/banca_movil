@@ -111,6 +111,7 @@ class _TransactionsList extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
         child: ListView.builder(
+          physics: const ClampingScrollPhysics(),
           itemCount: 50,
           itemBuilder: (context, index){
             return Padding(

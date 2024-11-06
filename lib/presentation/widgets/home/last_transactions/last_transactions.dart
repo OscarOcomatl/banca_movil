@@ -81,7 +81,7 @@ class _TransactionList extends StatelessWidget{
       height: 410,
       child: ListView.builder(
         // shrinkWrap: true,
-        itemCount: 10,
+        itemCount: 15,
         itemBuilder: (context, index) {
           return const _TransactionItem();
         },
@@ -105,7 +105,7 @@ class _TransactionItem extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
         child: SizedBox(
           width: double.infinity,
-          height: 80,
+          height: 60,
           child: ClipRRect(
             borderRadius: BorderRadius.circular(10),
             child: DecoratedBox(
