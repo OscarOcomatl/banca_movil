@@ -12,6 +12,7 @@ class AddNewCard extends StatelessWidget {
 
     final GlobalKey<FormState> formKey = GlobalKey<FormState>();
 
+
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
@@ -20,24 +21,19 @@ class AddNewCard extends StatelessWidget {
       body: SingleChildScrollView(
         child: Form(
           key: formKey,
-          child: Column(
+          child: const Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(10),
-                  child: Container(
-                    height: 200,
-                    color: const Color.fromRGBO(12, 57, 88, 1),
-                  ),
-                ),
-              ),
-              CustomInputField(),
-              CustomInputField(),
-              CustomInputField(),
-              CustomInputField(),
-              CustomInputField(),
-              CustomInputField(),
+              CardDescription(),
+              TextDescription(description: 'Nombre de la tarjeta'),
+              InputInfoField(hintText: 'Nombre'),
+              TextDescription(description: 'Nombre del Banco'),
+              EntitiesDropDownButtonFormField(),
+              TextDescription(description: 'Numero de la tarjeta'),
+              InputInfoField(hintText: 'Numero'),
+              TextDescription(description: 'Fecha de vencimiento'),
+              InputInfoField(hintText: 'Fecha'),
+              SaveInfoButton()
             ],
           ),
         ),
@@ -45,3 +41,6 @@ class AddNewCard extends StatelessWidget {
     );
   }
 }
+
+
+

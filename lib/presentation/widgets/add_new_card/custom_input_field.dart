@@ -1,11 +1,18 @@
-
-
 import 'package:flutter/material.dart';
 
-class CustomInputField extends StatelessWidget{
+class InputInfoField extends StatelessWidget{
+
+  final String? labelText;
+  final String? initialValue;
+  final String? hintText;
 
 
-const CustomInputField({super.key});
+const InputInfoField({
+  this.labelText,
+  this.initialValue,
+  this.hintText,
+  super.key
+  });
 
 @override
 Widget build(BuildContext context){
@@ -13,7 +20,7 @@ Widget build(BuildContext context){
     padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 5),
     child: TextFormField(
       autofocus: false,
-      initialValue: 'Hola',
+      initialValue: initialValue,
       textCapitalization: TextCapitalization.words,
       keyboardType: TextInputType.name,
       obscureText: false,
@@ -25,20 +32,22 @@ Widget build(BuildContext context){
       },
       autovalidateMode: AutovalidateMode.onUserInteraction,
       decoration: InputDecoration(
-        hintText: 'Nombre de la tarjeta',
-        labelText: 'Nombre',
-        helperText: 'Nombre 2',
-        border: OutlineInputBorder(),
-        // hoverColor: Colors.red
-        // labelStyle: TextStyle(
-        //   backgroundColor: Colors.red
-        // )
-        // hoverColor: Colors.red
-        // border: InputBorder.none
-        // counterText: '1',
-        // suffixIcon: Icon(Icons.circle),
-        // icon: Icon(Icons.square)
-
+        hintText: hintText,
+        labelText: labelText,
+        focusedBorder: OutlineInputBorder(
+          // borderSide: const BorderSide(color: Colors.black54),
+          borderSide: const BorderSide(color: Colors.black12),
+          borderRadius: BorderRadius.circular(10)
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderSide: const BorderSide(
+            // color: Colors.black54,
+            color: Colors.transparent
+          ),
+          borderRadius: BorderRadius.circular(10)
+        ),
+        filled: true,
+        fillColor: const Color.fromRGBO(	236, 239, 241, 1),
       ),
     ),
   );
