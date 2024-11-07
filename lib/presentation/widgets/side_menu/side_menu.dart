@@ -38,10 +38,13 @@ class _SideMenuState extends State<SideMenu> {
         ...menuItems
         .map(
           (item) => NavigationDrawerDestination(
-            icon: Icon(item.icon), 
+            // backgroundColor: Colors.red,
+
+            // icon: Icon(item.icon), 
+            icon: const Text(''),
             label: Text(item.title)
           )
-        )
+        ),
         // NavigationDrawerDestination(icon: Text(''), label: Text('Perfil')),
         // NavigationDrawerDestination(icon: Text(''), label: Text('Cuenta')),
         // NavigationDrawerDestination(icon: Text(''), label: Text('Preferencias')),
