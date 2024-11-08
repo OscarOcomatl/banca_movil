@@ -27,9 +27,9 @@ final appRouter = GoRouter(
     ),
     GoRoute(
       path: '/add-new-card',
-      name: AddNewCard.name,
+      name: AddNewCardScreen.name,
       builder: (context, state){
-        return const AddNewCard();
+        return const AddNewCardScreen();
       }
     ),
   ]

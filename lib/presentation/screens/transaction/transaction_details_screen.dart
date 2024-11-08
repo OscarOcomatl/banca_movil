@@ -182,7 +182,7 @@ class _OriginatorAndBeneficiaryInfo extends StatelessWidget {
                     child: Container(
                       // height: 80,
                       width: 279,
-                      color: Colors.grey,
+                      // color: Colors.grey,
                                             child: const Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [

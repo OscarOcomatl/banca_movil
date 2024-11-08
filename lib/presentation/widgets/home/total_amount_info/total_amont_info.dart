@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
 class TotalAmontInfo extends StatelessWidget {
@@ -12,10 +13,13 @@ class TotalAmontInfo extends StatelessWidget {
 
     return Padding(
       padding:  const EdgeInsets.only(left: 20, right: 20, top: 20,  ),
-      child: SizedBox(
-        width: double.infinity,
-        height: 75,
-        child: AmountInfo(),
+      child: FadeIn(
+        duration: const Duration(seconds: 2),
+        child: SizedBox(
+          width: double.infinity,
+          height: 75,
+          child: AmountInfo(),
+        ),
       ),
     );
   }

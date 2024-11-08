@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:banca_movil/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -76,14 +77,20 @@ class _TransactionList extends StatelessWidget{
 
     // final heigth = MediaQuery.of(context).size.height;
 
-    return Container(
+    return SizedBox(
       width: double.infinity,
       height: 410,
       child: ListView.builder(
         // shrinkWrap: true,
         itemCount: 15,
         itemBuilder: (context, index) {
-          return const _TransactionItem();
+          final indexFrom = index * 50;
+          // print('$indexFrom $index');
+          return FadeInLeft(
+            from: indexFrom.toDouble(),
+            duration: const Duration(seconds: 2),
+            child: const _TransactionItem()
+          );
         },
         // ],
       ),

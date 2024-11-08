@@ -1,11 +1,12 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:banca_movil/presentation/widgets/widgets.dart';
 import 'package:flutter/material.dart';
 
-class AddNewCard extends StatelessWidget {
+class AddNewCardScreen extends StatelessWidget {
 
   static const String name = 'add-new-card';
    
-  const AddNewCard({Key? key}) : super(key: key);
+  const AddNewCardScreen({Key? key}) : super(key: key);
   
   @override
   Widget build(BuildContext context) {
@@ -21,18 +22,18 @@ class AddNewCard extends StatelessWidget {
       body: SingleChildScrollView(
         child: Form(
           key: formKey,
-          child: const Column(
+          child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               CardDescription(),
               TextDescription(description: 'Nombre de la tarjeta'),
-              InputInfoField(hintText: 'Nombre'),
+              InputInformField(hintText: 'Nombre'),
               TextDescription(description: 'Nombre del Banco'),
               EntitiesDropDownButtonFormField(),
               TextDescription(description: 'Numero de la tarjeta'),
-              InputInfoField(hintText: 'Numero'),
+              InputInformField(hintText: 'Numero'),
               TextDescription(description: 'Fecha de vencimiento'),
-              InputInfoField(hintText: 'Fecha'),
+              InputInformField(hintText: 'Fecha'),
               SaveInfoButton()
             ],
           ),

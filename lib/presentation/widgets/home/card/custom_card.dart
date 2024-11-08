@@ -1,3 +1,4 @@
+import 'package:animate_do/animate_do.dart';
 import 'package:flutter/material.dart';
 
 class CustomCard extends StatelessWidget {
@@ -13,19 +14,22 @@ class CustomCard extends StatelessWidget {
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: SizedBox(
-        height: 250,
-        // width: 100,
-        // color: Colors.red,
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.only(top: 20, bottom: 20),
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(10),
-              child: Container(
-                width: 400,
-                color: const Color.fromRGBO(12, 57, 88, 1),
-                child: CardInfo(cardName: cardNameStyle, descriptionStyle: descriptionStyle, cardNumberStyle: cardNumberStyle),
+      child: FadeIn(
+        duration: const Duration(seconds: 2),
+        child: SizedBox(
+          height: 250,
+          // width: 100,
+          // color: Colors.red,
+          child: Center(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 20, bottom: 20),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(10),
+                child: Container(
+                  width: 400,
+                  color: const Color.fromRGBO(12, 57, 88, 1),
+                  child: CardInfo(cardName: cardNameStyle, descriptionStyle: descriptionStyle, cardNumberStyle: cardNumberStyle),
+                ),
               ),
             ),
           ),

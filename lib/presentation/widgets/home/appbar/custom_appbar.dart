@@ -24,7 +24,7 @@ class CustomAppbar {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text('Hola, Oscar', maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 16), ),
+              Text('Hola, Cristiano Ronaldo', maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 16), ),
                SizedBox(
                   height: 2,
                 ),
